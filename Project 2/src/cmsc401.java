@@ -1,8 +1,6 @@
 //Masrik Dahir
 
 import java.util.Scanner;
-import static java.lang.Math.abs;
-
 public class cmsc401 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -35,14 +33,21 @@ public class cmsc401 {
         int p = 0;
         int r = B.length-1;
         int middle_index = 0;
+        int middle_index_2 = 0;
+
         if (B.length%2 == 1) {
             middle_index = (((B.length + 1) / 2) - 1);
+            int median = Quicksort_median(B, p, r, middle_index)[middle_index];
+            System.out.println(value(B,median));
         }
         else{
             middle_index = (B.length / 2) -1;
+            middle_index_2 = (B.length / 2);
+            int median = Quicksort_median(B, p, r, middle_index)[middle_index];
+            int median_2 = Quicksort_median(B, p, r, middle_index_2)[middle_index_2];
+            int true_median = (value(B,median) < value(B,median_2)) ? median : median_2;
+            System.out.println(value(B,true_median));
         }
-        int median = Quicksort_median(B, p, r, middle_index)[middle_index];
-        System.out.println(value(B,median));
     }
 
 
@@ -88,5 +93,14 @@ public class cmsc401 {
             sum += local_value;
         }
         return sum;
+    }
+
+    public static int abs(int a){
+        if (a <=0){
+            return a*(-1);
+        }
+        else{
+            return a;
+        }
     }
 }

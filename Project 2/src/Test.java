@@ -6,7 +6,6 @@ public class Test {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int number = sc.nextInt();
-
         int[] nums = new int[number];
         int[] value = new int[number];
         int num = 0;
@@ -54,7 +53,5 @@ public class Test {
             }
         }
         System.out.println(lowest_sum);
-
-
     }
 }
