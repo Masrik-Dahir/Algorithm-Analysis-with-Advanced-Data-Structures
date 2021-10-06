@@ -26,8 +26,8 @@ public class cmsc401 {
                 not_zero+=1;
             }
         }
-        int B[] = new int[not_zero];
-        for (int i = 0; i < not_zero; i++){
+        int B[] = new int[not_zero+1];
+        for (int i = 0; i < not_zero+1; i++){
             B[i] = A[i];
         }
         int p = 0;
@@ -38,7 +38,7 @@ public class cmsc401 {
         if (B.length%2 == 1) {
             middle_index = (((B.length + 1) / 2) - 1);
             int median = Quicksort_median(B, p, r, middle_index)[middle_index];
-            System.out.println(value(B,median));
+            System.out.println(median);
         }
         else{
             middle_index = (B.length / 2) -1;
@@ -46,11 +46,17 @@ public class cmsc401 {
             int median = Quicksort_median(B, p, r, middle_index)[middle_index];
             int median_2 = Quicksort_median(B, p, r, middle_index_2)[middle_index_2];
             int true_median = (value(B,median) < value(B,median_2)) ? median : median_2;
-            System.out.println(value(B,true_median));
+            System.out.println(true_median);
         }
     }
 
-
+    public static int sum(int[] array) {
+        int sum = 0;
+        for (int value : array) {
+            sum += value;
+        }
+        return sum;
+    }
     public static int Partition(int[] A, int p, int r) {
         int x = A[r];
         int i = p - 1;

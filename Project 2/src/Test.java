@@ -38,11 +38,12 @@ public class Test {
 
 
         int lowest_sum = 0;
+        int man = 0;
 //        finding the value for all possible coordinates from y-lowest and y-higest
         for (int j = low; j<=high; j++){
             int sum = 0;
             for (int i = 0; i < number; i++){
-                int local_value = abs(nums[i] - j)*value[i];
+                int local_value = Math.abs(nums[i] - j)*value[i];
                 sum += local_value;
             }
             if (j == low){
@@ -50,8 +51,9 @@ public class Test {
             }
             if(lowest_sum>sum){
                 lowest_sum = sum;
+                man = j;
             }
         }
-        System.out.println(lowest_sum);
+        System.out.println(man);
     }
 }
