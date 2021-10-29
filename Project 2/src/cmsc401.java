@@ -26,8 +26,9 @@ public class cmsc401 {
                 not_zero+=1;
             }
         }
-        int B[] = new int[not_zero+1];
-        for (int i = 0; i < not_zero+1; i++){
+
+        int B[] = new int[not_zero];
+        for (int i = 0; i < not_zero; i++){
             B[i] = A[i];
         }
         int p = 0;
