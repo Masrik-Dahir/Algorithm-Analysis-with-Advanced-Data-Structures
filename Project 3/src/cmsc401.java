@@ -1,6 +1,4 @@
 import java.util.Scanner;
-import java.util.ArrayList;
-import java.util.List;
 
 public class cmsc401{
 
@@ -52,13 +50,13 @@ public class cmsc401{
         String string_Test;
         int numCourses = Integer.parseInt(sc.nextLine());
         int numRooms = Integer.parseInt(sc.nextLine());
+
         //auto-initialized to falses
         boolean[][] big_bool = new boolean[numCourses][numRooms];
 
         //this loop scans each line of the input and then scans that line again
         //after the first string "cx:" the loop begins reading in the hall values
         //and triggers the corresponding boolean flag to be changed
-
         for(int i = 0; i < numCourses; i++){
             Scanner sc_line_by = new Scanner(sc.nextLine());
             sc_line_by.useDelimiter("H");
