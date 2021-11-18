@@ -2,10 +2,10 @@
 import java.util.Scanner;
 
 public class cmsc401{
-
     static int max_flow_match(boolean[][] check, int count_C, int count_H){
         int[] flow_recognized = new int[count_H];
         int increment = 0;
+
         for(int i = 0; i < count_H; i++){
             flow_recognized[i] = -1;
         }
@@ -18,6 +18,7 @@ public class cmsc401{
             if(Assign_course_to_room(check,i,recognized,flow_recognized,count_C,count_H))
                 increment++;
         }
+
         return increment;
     }
 
@@ -26,6 +27,7 @@ public class cmsc401{
         int count_C = Integer.parseInt(input.nextLine());
         int count_H = Integer.parseInt(input.nextLine());
         boolean[][] check = new boolean[count_C][count_H];
+
         for(int i = 0; i < count_C; i++){
             Scanner room_and_course_input = new Scanner(input.nextLine());
             room_and_course_input.useDelimiter("H");
@@ -35,6 +37,7 @@ public class cmsc401{
                 check[i][curr-1] = true;
             }
         }
+
         int answer = max_flow_match(check,count_C,count_H);
         System.out.println(answer);
     }
@@ -51,6 +54,7 @@ public class cmsc401{
                 }
             }
         }
+
         return false;
     }
 }
