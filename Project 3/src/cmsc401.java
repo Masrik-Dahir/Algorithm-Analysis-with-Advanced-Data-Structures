@@ -7,13 +7,13 @@ public class cmsc401{
     //already taken, the function should check if the current occupier can move
     //to a different room. This can be recursive such that multiple rooms can
     //be swapped.
-    static boolean placeClass(boolean big_bool[][], int course_index,
-                              boolean seenByCourse[], int currMatch[],
-                              int numCourses, int numRooms){
+    static boolean Assign_course_to_room(boolean[][] big_bool, int course_index,
+                                         boolean[] seenByCourse, int[] currMatch,
+                                         int numCourses, int numRooms){
         for(int i = 0; i<numRooms; i++){
             if(big_bool[course_index][i] && !seenByCourse[i]){
                 seenByCourse[i] = true;
-                if(currMatch[i] < 0 || placeClass(big_bool, currMatch[i], seenByCourse,
+                if(currMatch[i] < 0 || Assign_course_to_room(big_bool, currMatch[i], seenByCourse,
                         currMatch, numCourses, numRooms)) {
                     currMatch[i] = course_index;
                     return true;
@@ -26,7 +26,7 @@ public class cmsc401{
     //this function is kind of the controller of the place class function.
     //it iterates through each class and sends that class to the place place
     //class method. upon a successful place, the result is incremented.
-    static int maxMatch(boolean big_bool[][], int numCourses, int numRooms){
+    static int maxMatch(boolean[][] big_bool, int numCourses, int numRooms){
         int[] currMatch = new int[numRooms];
         int result = 0;
         for(int i = 0; i < numRooms; i++){
@@ -38,7 +38,7 @@ public class cmsc401{
             for(int j = 0; j < numRooms; j++){
                 seenByCourse[j] = false;
             }
-            if(placeClass(big_bool,i,seenByCourse,currMatch,numCourses,numRooms))
+            if(Assign_course_to_room(big_bool,i,seenByCourse,currMatch,numCourses,numRooms))
                 result++;
         }
         return result;
