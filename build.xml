@@ -1,4 +1,4 @@
-<project name="Algorithm-Analysis-with-Advanced-Data-Structures" default="dist" basedir="build">
+<project name="CMSC 401" default="dist" basedir="build">
     <description>
         simple example build file
     </description>
