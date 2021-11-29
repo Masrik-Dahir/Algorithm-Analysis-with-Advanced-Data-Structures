@@ -17,9 +17,11 @@ public class generate {
         Collections.shuffle(list);
 
         ArrayList<Integer> list2 = new ArrayList<Integer>();
+        List<Integer> pre = list.subList(0,cuts);
+        Collections.sort(pre);
         list2.add(size);
         list2.add(cuts);
-        list2.addAll(list.subList(0,cuts));
+        list2.addAll(pre);
         return toArray(list2);
 
     }
