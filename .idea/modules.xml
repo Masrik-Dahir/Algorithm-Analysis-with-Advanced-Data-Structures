@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CMSC 401.iml" filepath="$PROJECT_DIR$/CMSC 401.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Algorithm-Analysis-with-Advanced-Data-Structures.iml" filepath="$PROJECT_DIR$/Algorithm-Analysis-with-Advanced-Data-Structures.iml" />
       <module fileurl="file://$PROJECT_DIR$/Egyptian Algorithm/Egyptian Algorithm.iml" filepath="$PROJECT_DIR$/Egyptian Algorithm/Egyptian Algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/Project 1/Project 1.iml" filepath="$PROJECT_DIR$/Project 1/Project 1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Project 2/Project 2.iml" filepath="$PROJECT_DIR$/Project 2/Project 2.iml" />
