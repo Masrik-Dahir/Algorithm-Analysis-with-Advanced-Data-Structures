@@ -32,7 +32,6 @@ public class cmsc401 {
 
         public void add(int i, int cutPoint) {
             single_array[i] = cutPoint;
-//            quickSort(m,0, m.length - 1);
         }
 
         public int get_cuts() {
