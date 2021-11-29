@@ -17,8 +17,6 @@ public class rough {
             arr[i] = input.nextInt();
         }
 
-        int result = rough.value(_size, arr);
-        System.out.println(result);
         ArrayList<Integer> a = toArrayList(arr);
         rough.permute(a, 0);
 
@@ -90,9 +88,9 @@ public class rough {
             java.util.Collections.swap(arr, k, i);
         }
         if (k == arr.size() -1){
-            System.out.println(java.util.Arrays.toString(arr.toArray()));
+//            System.out.println(java.util.Arrays.toString(arr.toArray()));
             int value = value(_size, toArray(arr));
-            System.out.println(value);
+//            System.out.println(value);
             values.add(value);
         }
         return n;
