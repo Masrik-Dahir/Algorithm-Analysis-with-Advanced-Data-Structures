@@ -6,9 +6,6 @@ public class rough {
     public static int _size;
     public static int _cuts;
 
-
-
-
     public static void main(String[] args) {
 
 
