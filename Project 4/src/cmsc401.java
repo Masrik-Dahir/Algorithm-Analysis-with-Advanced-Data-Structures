@@ -33,7 +33,7 @@ public class cmsc401 {
 
         public void addCutPoint(int i, int cutPoint) {
             m[i] = cutPoint;
-            quickSort(m,0, m.length - 1);
+//            quickSort(m,0, m.length - 1);
         }
 
         public int getNumCutPoints() {
@@ -72,35 +72,35 @@ public class cmsc401 {
         }
 
 
-        static int partition(int[] arr, int low, int high)
-        {
-
-            int pivot = arr[high];
-            int i = (low - 1);
-
-            for(int j = low; j <= high - 1; j++)
-            {
-                if (arr[j] < pivot)
-                {
-                    i++;
-                    swap(arr, i, j);
-                }
-            }
-            swap(arr, i + 1, high);
-            return (i + 1);
-        }
-
-        static void quickSort(int[] arr, int low, int high)
-        {
-            if (low < high)
-            {
-
-                int pi = partition(arr, low, high);
-                quickSort(arr, low, pi - 1);
-                quickSort(arr, pi + 1, high);
-            }
-        }
-    }
+//        static int partition(int[] arr, int low, int high)
+//        {
+//
+//            int pivot = arr[high];
+//            int i = (low - 1);
+//
+//            for(int j = low; j <= high - 1; j++)
+//            {
+//                if (arr[j] < pivot)
+//                {
+//                    i++;
+//                    swap(arr, i, j);
+//                }
+//            }
+//            swap(arr, i + 1, high);
+//            return (i + 1);
+//        }
+//
+//        static void quickSort(int[] arr, int low, int high)
+//        {
+//            if (low < high)
+//            {
+//
+//                int pi = partition(arr, low, high);
+//                quickSort(arr, low, pi - 1);
+//                quickSort(arr, pi + 1, high);
+//            }
+//        }
+//    }
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
