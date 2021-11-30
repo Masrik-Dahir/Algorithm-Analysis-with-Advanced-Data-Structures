@@ -30,8 +30,8 @@ public class cmsc401 {
             this._cuts = _cuts;
         }
 
-        public void add(int i, int cutPoint) {
-            single_array[i] = cutPoint;
+        public void add(int index, int value) {
+            single_array[index] = value;
         }
 
         public int get_cuts() {
@@ -42,24 +42,24 @@ public class cmsc401 {
             return lowest_cost(0, _cuts -1, 0, _size);
         }
 
-        public int lowest_cost(int leftCutIndex, int rightCutIndex, int segmentStart, int segmentEnd) {
+        public int lowest_cost(int left, int right, int start, int end) {
 
-            if (rightCutIndex >= _cuts || leftCutIndex > rightCutIndex)
+            if (right >= _cuts || left > right)
                 return 0;
 
-            if (leftCutIndex == rightCutIndex)
-                return segmentEnd - segmentStart;
+            if (left == right)
+                return end - start;
 
-            if (double_array[leftCutIndex][rightCutIndex] != -1)
-                return double_array[leftCutIndex][rightCutIndex];
+            if (double_array[left][right] != -1)
+                return double_array[left][right];
 
-            int currentMin = Integer.MAX_VALUE;
+            int local_minimum_cost = Integer.MAX_VALUE;
 
-            for(int i = leftCutIndex; i <= rightCutIndex; i++)
-                currentMin = Math.min(segmentEnd-segmentStart + lowest_cost(leftCutIndex, i-1, segmentStart, single_array[i]) + lowest_cost(i+1, rightCutIndex, single_array[i], segmentEnd), currentMin);
-            double_array[leftCutIndex][rightCutIndex] = currentMin;
+            for(int i = left; i <= right; i++)
+                local_minimum_cost = Math.min(end-start + lowest_cost(left, i-1, start, single_array[i]) + lowest_cost(i+1, right, single_array[i], end), local_minimum_cost);
+            double_array[left][right] = local_minimum_cost;
 
-            return currentMin;
+            return local_minimum_cost;
         }
     }
 
