@@ -35,7 +35,7 @@ public class generate {
     }
 
     public static void main(String[] args) {
-        int[] first = random(100);
+        int[] first = random(10000);
         for (int i: first){
             System.out.println(i);
         }
