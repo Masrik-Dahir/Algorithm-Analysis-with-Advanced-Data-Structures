@@ -1,5 +1,5 @@
-<project name="FreeJ2ME">
-	<echo message="Building FreeJ2ME" />
+<project name="Algorithm-Analysis-with-Advanced-Data-Structures">
+	<echo message="Building Algorithm-Analysis-with-Advanced-Data-Structures" />
 
 
 <!--
@@ -28,15 +28,15 @@
 ****************************************************
 -->
 
-	<echo message="Building JAR - AWT" />
+<!-- 	<echo message="Building JAR - AWT" />
 	<jar
 		destfile="build/freej2me.jar"
 		basedir="build/classes">
 		<fileset dir="resources" />
 		<metainf dir="META-INF" />
-		<manifest>
+		<manifest> -->
 			<!-- AWT Version -->
-			<attribute name="Main-Class" value="org.recompile.freej2me.FreeJ2ME"/>
+<!-- 			<attribute name="Main-Class" value="org.recompile.freej2me.FreeJ2ME"/>
 			<attribute name="Implementation-Title" value="FreeJ2ME"/>
 		</manifest>
 	</jar>
@@ -47,9 +47,9 @@
 		basedir="build/classes">
 		<fileset dir="resources" />
 		<metainf dir="META-INF" />
-		<manifest>
+		<manifest> -->
 			<!-- Libretro Version -->
-			<attribute name="Main-Class" value="org.recompile.freej2me.Libretro"/>
+<!-- 			<attribute name="Main-Class" value="org.recompile.freej2me.Libretro"/>
 			<attribute name="Implementation-Title" value="FreeJ2ME"/>
 		</manifest>
 	</jar>
@@ -60,12 +60,12 @@
 		basedir="build/classes">
 		<fileset dir="resources" />
 		<metainf dir="META-INF" />
-		<manifest>
+		<manifest> -->
 			<!-- Libretro Version -->
-			<attribute name="Main-Class" value="org.recompile.freej2me.Anbu"/>
+<!-- 			<attribute name="Main-Class" value="org.recompile.freej2me.Anbu"/>
 			<attribute name="Implementation-Title" value="FreeJ2ME"/>
 		</manifest>
-	</jar>
+	</jar> -->
 
 
 </project>
